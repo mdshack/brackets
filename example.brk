@@ -1,0 +1,46 @@
+// Example brackets file
+
+function greetPerson{name: "random person", numberOfTimes: 3} { // end of line comments
+    for{times{numberOfTimes}} {
+        print{"Hello, {{name}}"}
+    }
+}
+
+name = "Micah"
+greetPerson{name: name} 
+// >> "Hello, Micah"
+// >> "Hello, Micah"
+// >> "Hello, Micah"
+
+greetPerson{"Micah"} 
+// >> "Hello, Micah"
+// >> "Hello, Micah"
+// >> "Hello, Micah"
+
+greetPerson{times: 5}
+// >> "Hello, random person"
+// >> "Hello, random person"
+// >> "Hello, random person"
+// >> "Hello, random person"
+// >> "Hello, random person"
+
+// {} accepts positional or kwargs
+
+// Array
+{
+    "test",
+    "test2",
+    "test3",
+}
+
+// Object
+{
+    "test": true,
+    "test2": "Blam",
+    "test3": 1,
+}
+
+print{150 + 125}
+print{150 - 125}
+print{150 * 125}
+print{150 / 125}

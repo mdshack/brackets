@@ -1,0 +1,94 @@
+{1 1} COMMENT // Example brackets file
+{3 1} FUNCTION function
+{3 10} IDENTITY greetPerson
+{3 21} OPEN {
+{3 22} IDENTITY name
+{3 28} INTEGER "random person"
+{3 45} IDENTITY numberOfTimes
+{3 60} INTEGER 3
+{3 61} CLOSE }
+{3 63} OPEN {
+{3 65} COMMENT // end of line comments
+{4 5} FOR for
+{4 8} OPEN {
+{4 9} IDENTITY times
+{4 14} OPEN {
+{4 15} IDENTITY numberOfTimes
+{4 28} CLOSE }
+{4 29} CLOSE }
+{4 31} OPEN {
+{5 9} IDENTITY print
+{5 14} OPEN {
+{5 15} INTEGER "Hello, {{name}}"
+{5 32} CLOSE }
+{6 5} CLOSE }
+{7 1} CLOSE }
+{9 1} IDENTITY name
+{9 6} ASSIGNMENT =
+{9 8} INTEGER "Micah"
+{10 1} IDENTITY greetPerson
+{10 12} OPEN {
+{10 13} IDENTITY name
+{10 19} IDENTITY name
+{10 23} CLOSE }
+{11 1} COMMENT // >> "Hello, Micah"
+{12 1} COMMENT // >> "Hello, Micah"
+{13 1} COMMENT // >> "Hello, Micah"
+{15 1} IDENTITY greetPerson
+{15 12} OPEN {
+{15 13} INTEGER "Micah"
+{15 20} CLOSE }
+{16 1} COMMENT // >> "Hello, Micah"
+{17 1} COMMENT // >> "Hello, Micah"
+{18 1} COMMENT // >> "Hello, Micah"
+{20 1} IDENTITY greetPerson
+{20 12} OPEN {
+{20 13} IDENTITY times
+{20 20} INTEGER 5
+{20 21} CLOSE }
+{21 1} COMMENT // >> "Hello, random person"
+{22 1} COMMENT // >> "Hello, random person"
+{23 1} COMMENT // >> "Hello, random person"
+{24 1} COMMENT // >> "Hello, random person"
+{25 1} COMMENT // >> "Hello, random person"
+{27 1} COMMENT // {} accepts positional or kwargs
+{29 1} COMMENT // Array
+{30 1} OPEN {
+{31 5} INTEGER "test"
+{32 5} INTEGER "test2"
+{33 5} INTEGER "test3"
+{34 1} CLOSE }
+{36 1} COMMENT // Object
+{37 1} OPEN {
+{38 5} INTEGER "test"
+{38 13} IDENTITY true
+{39 5} INTEGER "test2"
+{39 14} INTEGER "Blam"
+{40 5} INTEGER "test3"
+{40 14} INTEGER 1
+{41 1} CLOSE }
+{43 1} IDENTITY print
+{43 6} OPEN {
+{43 7} INTEGER 150
+{43 11} ADD +
+{43 13} INTEGER 125
+{43 16} CLOSE }
+{44 1} IDENTITY print
+{44 6} OPEN {
+{44 7} INTEGER 150
+{44 11} SUBTRACT -
+{44 13} INTEGER 125
+{44 16} CLOSE }
+{45 1} IDENTITY print
+{45 6} OPEN {
+{45 7} INTEGER 150
+{45 11} MULTIPLY *
+{45 13} INTEGER 125
+{45 16} CLOSE }
+{46 1} IDENTITY print
+{46 6} OPEN {
+{46 7} INTEGER 150
+{46 11} DIVIDE /
+{46 13} INTEGER 125
+{46 16} CLOSE }
+{47 0} EOF
