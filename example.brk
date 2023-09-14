@@ -52,3 +52,9 @@
     functionTest{}
     ifTest{}
     returnTest{}
+
+// Test booleans
+    true
+    false
+    truetrues
+    falsefals

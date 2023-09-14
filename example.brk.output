@@ -58,7 +58,7 @@
 {32 5} IDENTITY Object
 {32 11} OPEN {
 {33 9} INTEGER "test"
-{33 17} IDENTITY true
+{33 17} BOOLEAN true
 {34 9} INTEGER "test2"
 {34 18} INTEGER "Blam"
 {35 9} INTEGER "test3"
@@ -67,7 +67,7 @@
 {38 5} COMMENT // Array constructor
 {39 5} IDENTITY Array
 {39 10} OPEN {
-{40 9} IDENTITY true
+{40 9} BOOLEAN true
 {41 9} INTEGER "Blam"
 {42 9} INTEGER 1
 {43 5} CLOSE }
@@ -106,4 +106,9 @@
 {54 5} IDENTITY returnTest
 {54 15} OPEN {
 {54 16} CLOSE }
-{54 16} EOF
+{56 1} COMMENT // Test booleans
+{57 5} BOOLEAN true
+{58 5} BOOLEAN false
+{59 5} IDENTITY truetrues
+{60 5} IDENTITY falsefals
+{60 13} EOF

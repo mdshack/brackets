@@ -124,8 +124,10 @@ func (l *Lexer) Lex() (Position, token.Token, string) {
 
 // Peek ahead, don't move the reader or lexer position
 func (l *Lexer) Peek() rune {
-	r, _, _ := l.reader.ReadRune()
-	// todo: handle read errors
+	r, _, err := l.reader.ReadRune()
+	if err == io.EOF {
+		return r
+	}
 
 	if err := l.reader.UnreadRune(); err != nil {
 		panic(err)
@@ -163,6 +165,10 @@ func (l *Lexer) LexKeywordOrIdentity(r rune) (Position, token.Token, string) {
 				return start, token.FUNCTION, current
 			case "return":
 				return start, token.RETURN, current
+			case "true":
+				return start, token.BOOLEAN, current
+			case "false":
+				return start, token.BOOLEAN, current
 			}
 
 			break

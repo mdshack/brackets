@@ -10,6 +10,7 @@ const (
 
 	INTEGER // 123
 	STRING  // "test"
+	BOOLEAN // true/false
 
 	// Single character operators
 	ADD          // +
