@@ -1,104 +1,109 @@
 {1 1} COMMENT // Example brackets file
-{3 1} FUNCTION function
-{3 10} IDENTITY greetPerson
-{3 21} OPEN {
-{3 22} IDENTITY name
-{3 28} INTEGER "random person"
-{3 45} IDENTITY numberOfTimes
-{3 60} INTEGER 3
-{3 61} CLOSE }
-{3 63} OPEN {
-{3 65} COMMENT // end of line comments
-{4 5} FOR for
-{4 8} OPEN {
-{4 9} IDENTITY times
-{4 14} OPEN {
-{4 15} IDENTITY numberOfTimes
-{4 28} CLOSE }
-{4 29} CLOSE }
-{4 31} OPEN {
-{5 9} IDENTITY print
-{5 14} OPEN {
-{5 15} INTEGER "Hello, {{name}}"
+{3 1} COMMENT // Function
+{4 5} FUNCTION function
+{4 14} IDENTITY greetPerson
+{4 25} OPEN {
+{4 26} IDENTITY name
+{4 32} INTEGER "random person"
+{4 49} IDENTITY numberOfTimes
+{4 64} INTEGER 3
+{4 65} CLOSE }
+{4 67} OPEN {
+{4 69} COMMENT // end of line comments
+{5 9} FOR for
+{5 12} OPEN {
+{5 13} IDENTITY times
+{5 18} OPEN {
+{5 19} IDENTITY numberOfTimes
 {5 32} CLOSE }
-{6 5} CLOSE }
-{7 1} CLOSE }
-{9 1} IDENTITY name
-{9 6} ASSIGNMENT =
-{9 8} INTEGER "Micah"
-{10 1} IDENTITY greetPerson
-{10 12} OPEN {
-{10 13} IDENTITY name
-{10 19} IDENTITY name
-{10 23} CLOSE }
-{11 1} COMMENT // >> "Hello, Micah"
-{12 1} COMMENT // >> "Hello, Micah"
-{13 1} COMMENT // >> "Hello, Micah"
-{15 1} IDENTITY greetPerson
-{15 12} OPEN {
-{15 13} INTEGER "Micah"
-{15 20} CLOSE }
-{16 1} COMMENT // >> "Hello, Micah"
-{17 1} COMMENT // >> "Hello, Micah"
-{18 1} COMMENT // >> "Hello, Micah"
-{20 1} IDENTITY greetPerson
-{20 12} OPEN {
-{20 13} IDENTITY times
-{20 20} INTEGER 5
-{20 21} CLOSE }
-{21 1} COMMENT // >> "Hello, random person"
-{22 1} COMMENT // >> "Hello, random person"
-{23 1} COMMENT // >> "Hello, random person"
-{24 1} COMMENT // >> "Hello, random person"
-{25 1} COMMENT // >> "Hello, random person"
-{27 1} COMMENT // {} accepts positional or kwargs
-{29 1} COMMENT // Array
-{30 1} OPEN {
-{31 5} INTEGER "test"
-{32 5} INTEGER "test2"
-{33 5} INTEGER "test3"
-{34 1} CLOSE }
-{36 1} COMMENT // Object
-{37 1} OPEN {
-{38 5} INTEGER "test"
-{38 13} IDENTITY true
-{39 5} INTEGER "test2"
-{39 14} INTEGER "Blam"
-{40 5} INTEGER "test3"
-{40 14} INTEGER 1
-{41 1} CLOSE }
-{43 1} IDENTITY print
-{43 6} OPEN {
-{43 7} INTEGER 150
-{43 11} ADD +
-{43 13} INTEGER 125
-{43 16} CLOSE }
-{44 1} IDENTITY print
-{44 6} OPEN {
-{44 7} INTEGER 150
-{44 11} SUBTRACT -
-{44 13} INTEGER 125
-{44 16} CLOSE }
-{45 1} IDENTITY print
-{45 6} OPEN {
-{45 7} INTEGER 150
-{45 11} MULTIPLY *
-{45 13} INTEGER 125
-{45 16} CLOSE }
-{46 1} IDENTITY print
-{46 6} OPEN {
-{46 7} INTEGER 150
-{46 11} DIVIDE /
-{46 13} INTEGER 125
-{46 16} CLOSE }
-{48 1} COMMENT // Test the ability to use keywords
-{49 1} IDENTITY functionTest
-{49 13} OPEN {
-{49 14} CLOSE }
-{50 1} IDENTITY ifTest
-{50 7} OPEN {
-{50 8} CLOSE }
-{51 1} IDENTITY returnTest
-{51 11} OPEN {
-{51 12} CLOSE }
-{51 12} EOF
+{5 33} CLOSE }
+{5 35} OPEN {
+{6 13} IDENTITY print
+{6 18} OPEN {
+{6 19} INTEGER "Hello, {{name}}"
+{6 36} CLOSE }
+{7 9} CLOSE }
+{8 5} CLOSE }
+{10 1} COMMENT // Call functions with args/kwargs
+{11 1} COMMENT // {} accepts positional or kwargs
+{12 5} IDENTITY name
+{12 10} ASSIGNMENT =
+{12 12} INTEGER "Micah"
+{13 5} IDENTITY greetPerson
+{13 16} OPEN {
+{13 17} IDENTITY name
+{13 23} IDENTITY name
+{13 27} CLOSE }
+{14 5} COMMENT // >> "Hello, Micah"
+{15 5} COMMENT // >> "Hello, Micah"
+{16 5} COMMENT // >> "Hello, Micah"
+{18 5} IDENTITY greetPerson
+{18 16} OPEN {
+{18 17} INTEGER "Micah"
+{18 24} CLOSE }
+{19 5} COMMENT // >> "Hello, Micah"
+{20 5} COMMENT // >> "Hello, Micah"
+{21 5} COMMENT // >> "Hello, Micah"
+{23 5} IDENTITY greetPerson
+{23 16} OPEN {
+{23 17} IDENTITY times
+{23 24} INTEGER 5
+{23 25} CLOSE }
+{24 5} COMMENT // >> "Hello, random person"
+{25 5} COMMENT // >> "Hello, random person"
+{26 5} COMMENT // >> "Hello, random person"
+{27 5} COMMENT // >> "Hello, random person"
+{28 5} COMMENT // >> "Hello, random person"
+{31 1} COMMENT // Object constructor (data types capitalized?)
+{32 5} IDENTITY Object
+{32 11} OPEN {
+{33 9} INTEGER "test"
+{33 17} IDENTITY true
+{34 9} INTEGER "test2"
+{34 18} INTEGER "Blam"
+{35 9} INTEGER "test3"
+{35 18} INTEGER 1
+{36 5} CLOSE }
+{38 5} COMMENT // Array constructor
+{39 5} IDENTITY Array
+{39 10} OPEN {
+{40 9} IDENTITY true
+{41 9} INTEGER "Blam"
+{42 9} INTEGER 1
+{43 5} CLOSE }
+{45 1} COMMENT // Math Operators
+{46 5} IDENTITY print
+{46 10} OPEN {
+{46 11} INTEGER 150
+{46 15} ADD +
+{46 17} INTEGER 125
+{46 20} CLOSE }
+{47 5} IDENTITY print
+{47 10} OPEN {
+{47 11} INTEGER 150
+{47 15} SUBTRACT -
+{47 17} INTEGER 125
+{47 20} CLOSE }
+{48 5} IDENTITY print
+{48 10} OPEN {
+{48 11} INTEGER 150
+{48 15} MULTIPLY *
+{48 17} INTEGER 125
+{48 20} CLOSE }
+{49 5} IDENTITY print
+{49 10} OPEN {
+{49 11} INTEGER 150
+{49 15} DIVIDE /
+{49 17} INTEGER 125
+{49 20} CLOSE }
+{51 1} COMMENT // Test the ability to use keywords
+{52 5} IDENTITY functionTest
+{52 17} OPEN {
+{52 18} CLOSE }
+{53 5} IDENTITY ifTest
+{53 11} OPEN {
+{53 12} CLOSE }
+{54 5} IDENTITY returnTest
+{54 15} OPEN {
+{54 16} CLOSE }
+{54 16} EOF

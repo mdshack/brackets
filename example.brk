@@ -1,51 +1,54 @@
 // Example brackets file
 
-function greetPerson{name: "random person", numberOfTimes: 3} { // end of line comments
-    for{times{numberOfTimes}} {
-        print{"Hello, {{name}}"}
+// Function
+    function greetPerson{name: "random person", numberOfTimes: 3} { // end of line comments
+        for{times{numberOfTimes}} {
+            print{"Hello, {{name}}"}
+        }
     }
-}
 
-name = "Micah"
-greetPerson{name: name} 
-// >> "Hello, Micah"
-// >> "Hello, Micah"
-// >> "Hello, Micah"
-
-greetPerson{"Micah"} 
-// >> "Hello, Micah"
-// >> "Hello, Micah"
-// >> "Hello, Micah"
-
-greetPerson{times: 5}
-// >> "Hello, random person"
-// >> "Hello, random person"
-// >> "Hello, random person"
-// >> "Hello, random person"
-// >> "Hello, random person"
-
+// Call functions with args/kwargs
 // {} accepts positional or kwargs
+    name = "Micah"
+    greetPerson{name: name} 
+    // >> "Hello, Micah"
+    // >> "Hello, Micah"
+    // >> "Hello, Micah"
 
-// Array
-{
-    "test",
-    "test2",
-    "test3",
-}
+    greetPerson{"Micah"} 
+    // >> "Hello, Micah"
+    // >> "Hello, Micah"
+    // >> "Hello, Micah"
 
-// Object
-{
-    "test": true,
-    "test2": "Blam",
-    "test3": 1,
-}
+    greetPerson{times: 5}
+    // >> "Hello, random person"
+    // >> "Hello, random person"
+    // >> "Hello, random person"
+    // >> "Hello, random person"
+    // >> "Hello, random person"
 
-print{150 + 125}
-print{150 - 125}
-print{150 * 125}
-print{150 / 125}
+
+// Object constructor (data types capitalized?)
+    Object{
+        "test": true,
+        "test2": "Blam",
+        "test3": 1,
+    }
+
+    // Array constructor
+    Array{
+        true,
+        "Blam",
+        1,
+    }
+
+// Math Operators
+    print{150 + 125}
+    print{150 - 125}
+    print{150 * 125}
+    print{150 / 125}
 
 // Test the ability to use keywords
-functionTest{}
-ifTest{}
-returnTest{}
+    functionTest{}
+    ifTest{}
+    returnTest{}
