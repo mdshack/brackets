@@ -154,22 +154,22 @@ func (l *Lexer) LexKeywordOrIdentity(r rune) (Position, token.Token, string) {
 		next := l.Peek()
 
 		if !unicode.IsLetter(next) {
+			switch current {
+			case "if":
+				return start, token.IF, current
+			case "for":
+				return start, token.FOR, current
+			case "function":
+				return start, token.FUNCTION, current
+			case "return":
+				return start, token.RETURN, current
+			}
+
 			break
 		}
 
 		l.AcceptPeek()
 		current += string(next)
-
-		switch current {
-		case "if":
-			return start, token.IF, current
-		case "for":
-			return start, token.FOR, current
-		case "function":
-			return start, token.FUNCTION, current
-		case "return":
-			return start, token.RETURN, current
-		}
 	}
 
 	return start, token.IDENTITY, current

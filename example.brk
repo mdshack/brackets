@@ -44,3 +44,8 @@ print{150 + 125}
 print{150 - 125}
 print{150 * 125}
 print{150 / 125}
+
+// Test the ability to use keywords
+functionTest{}
+ifTest{}
+returnTest{}

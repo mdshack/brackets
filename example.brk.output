@@ -91,4 +91,14 @@
 {46 11} DIVIDE /
 {46 13} INTEGER 125
 {46 16} CLOSE }
-{47 0} EOF
+{48 1} COMMENT // Test the ability to use keywords
+{49 1} IDENTITY functionTest
+{49 13} OPEN {
+{49 14} CLOSE }
+{50 1} IDENTITY ifTest
+{50 7} OPEN {
+{50 8} CLOSE }
+{51 1} IDENTITY returnTest
+{51 11} OPEN {
+{51 12} CLOSE }
+{51 12} EOF
